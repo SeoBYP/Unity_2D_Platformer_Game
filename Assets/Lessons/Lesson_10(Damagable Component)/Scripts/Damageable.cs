@@ -2,12 +2,15 @@ using Lesson_4;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UIElements.Experimental;
 
 namespace Lesson_10
 {
     public class Damageable : MonoBehaviour
     {
+        public UnityEvent<int, Vector2> damageableHit;
+
         Animator animator;
 
         [SerializeField]
@@ -74,19 +77,9 @@ namespace Lesson_10
                 timeSinceHit += Time.deltaTime;
                 return;
             }
-            GetHit(10);
         }
 
 
-
-        public void GetHit(int damage)
-        {
-            if(IsAlive && !isInvincible)
-            {
-                Health -= damage;
-                isInvincible = true;
-            }
-        }
     }
 
 }

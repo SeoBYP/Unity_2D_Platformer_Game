@@ -6,6 +6,8 @@ namespace Lesson_4
 {
     public class AnimationStrings
     {
+        public static string AttackCoolDown => "AttackCoolDown";
+
         public static string IsGrounded => "isGrounded";
 
         public static string IsMoving => "isMoving";
@@ -19,6 +21,11 @@ namespace Lesson_4
         public static string CanMove => "CanMove";
         public static string HasTarget => "hasTarget";
         public static string IsAlive => "isAlive";
+        public static string IsHit => "isHit";
+        public static string Hit => "Hit";
+        public static string LockVelocity => "LockVelocity";
+        public static string RangedAttack => "RangedAttack";
+
     }
 
 }

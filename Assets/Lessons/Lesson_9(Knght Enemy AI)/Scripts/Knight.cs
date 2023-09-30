@@ -18,6 +18,7 @@ namespace Lesson_9
         public float walkSpeed = 3.0f;
         public float walkStopRate = 0.6f;
         public DetectionZone attackZone;
+        public DetectionZone cliffDetectionZone;
 
         Rigidbody2D rb;
         TouchingDirections touchingDirections;
@@ -82,7 +83,8 @@ namespace Lesson_9
 
         private void FixedUpdate()
         {
-            if (touchingDirections.IsGrounded && touchingDirections.IsOnWall)
+            if (touchingDirections.IsGrounded && touchingDirections.IsOnWall
+                    && cliffDetectionZone.detectedColiders.Count == 0)
             {
                 FlipDirection();
             }
@@ -105,6 +107,14 @@ namespace Lesson_9
             else
             {
                 Debug.LogError("FlipDirection : ");
+            }
+        }
+
+        public void OnCliffDetected()
+        {
+            if (touchingDirections.IsGrounded)
+            {
+                FlipDirection();
             }
         }
 
