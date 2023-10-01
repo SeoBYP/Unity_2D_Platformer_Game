@@ -27,6 +27,8 @@ namespace Lesson_12
         {
             transform.eulerAngles += spinRotationSpeed * Time.deltaTime;
         }
+
+
     }
 
 }

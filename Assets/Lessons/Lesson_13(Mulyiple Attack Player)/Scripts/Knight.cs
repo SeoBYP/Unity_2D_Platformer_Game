@@ -31,13 +31,14 @@ namespace Lesson_13
         private WalkableDirection _walkDirection = WalkableDirection.Right;
         private Vector2 walkDirectionVector = Vector2.right;
 
-        [SerializeField]
-        private bool _hasTarget = false;
         public float AttackCoolDown
         {
             get { return animator.GetFloat(AnimationStrings.AttackCoolDown); }
             set { animator.SetFloat(AnimationStrings.AttackCoolDown, Mathf.Max(value, 0)); }
         }
+
+        [SerializeField]
+        private bool _hasTarget = false;
 
         public bool HasTarget
         {

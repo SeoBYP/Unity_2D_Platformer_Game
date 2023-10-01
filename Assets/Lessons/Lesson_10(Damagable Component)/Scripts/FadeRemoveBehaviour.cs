@@ -6,7 +6,9 @@ public class FadeRemoveBehaviour : StateMachineBehaviour
 {
 
     public float fadeTime = 0.5f;
+    public float fadeDelay= 0;
     private float timerElapsed = 0;
+    private float fadeDalayElapsed = 0;
     SpriteRenderer spriteRenderer;
     GameObject objToRemove;
     Color startColor;
@@ -23,14 +25,21 @@ public class FadeRemoveBehaviour : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        timerElapsed += Time.deltaTime;
-
-        float newAlpha = startColor.a * (1 - (timerElapsed /  fadeTime));
-
-        spriteRenderer.color = new Color(startColor.r, startColor.g, startColor.b, newAlpha);
-        if(timerElapsed > fadeTime)
+        if(fadeDelay > fadeDalayElapsed)
         {
-            Destroy(objToRemove);
+            fadeDalayElapsed += Time.deltaTime;
+        }
+        else
+        {
+            timerElapsed += Time.deltaTime;
+
+            float newAlpha = startColor.a * (1 - (timerElapsed / fadeTime));
+
+            spriteRenderer.color = new Color(startColor.r, startColor.g, startColor.b, newAlpha);
+            if (timerElapsed > fadeTime)
+            {
+                Destroy(objToRemove);
+            }
         }
     }
 

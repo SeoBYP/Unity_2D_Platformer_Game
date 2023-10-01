@@ -3,48 +3,52 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class UIManager : MonoBehaviour
+namespace Lesson_12
 {
-    public GameObject damageTextPrefab;
-    public GameObject healthTextPrefab;
-
-    public Canvas gameCanvas;
-
-    private void Awake()
+    public class UIManager : MonoBehaviour
     {
-        gameCanvas = FindObjectOfType<Canvas>();
-    }
+        public GameObject damageTextPrefab;
+        public GameObject healthTextPrefab;
 
-    private void OnEnable()
-    {
-        CharacterEvents.characterDamaged += CharacterTookDamage;
-        CharacterEvents.characterHealed += CharacterHealed;
-    }
+        public Canvas gameCanvas;
 
-    private void OnDisable()
-    {
-        CharacterEvents.characterDamaged -= CharacterTookDamage;
-        CharacterEvents.characterHealed -= CharacterHealed;
-    }
+        private void Awake()
+        {
+            gameCanvas = FindObjectOfType<Canvas>();
+        }
 
-    public void CharacterTookDamage(GameObject character , int damageReceived)
-    {
-        Vector3 spawnPosition = Camera.main.WorldToScreenPoint(character.transform.position);
+        private void OnEnable()
+        {
+            CharacterEvents.characterDamaged += CharacterTookDamage;
+            CharacterEvents.characterHealed += CharacterHealed;
+        }
 
-        TMP_Text tmpText = Instantiate(damageTextPrefab,spawnPosition,Quaternion.identity, gameCanvas.transform).
-            GetComponent<TMP_Text>();
+        private void OnDisable()
+        {
+            CharacterEvents.characterDamaged -= CharacterTookDamage;
+            CharacterEvents.characterHealed -= CharacterHealed;
+        }
 
-        tmpText.text = damageReceived.ToString();
-    }
+        public void CharacterTookDamage(GameObject character, int damageReceived)
+        {
+            Vector3 spawnPosition = Camera.main.WorldToScreenPoint(character.transform.position);
 
-    public void CharacterHealed(GameObject character, int damageRestored)
-    {
-        Vector3 spawnPosition = Camera.main.WorldToScreenPoint(character.transform.position);
+            TMP_Text tmpText = Instantiate(damageTextPrefab, spawnPosition, Quaternion.identity, gameCanvas.transform).
+                GetComponent<TMP_Text>();
 
-        TMP_Text tmpText = Instantiate(healthTextPrefab, spawnPosition, Quaternion.identity, gameCanvas.transform).
-            GetComponent<TMP_Text>();
+            tmpText.text = damageReceived.ToString();
+        }
 
-        tmpText.text = damageRestored.ToString();
+        public void CharacterHealed(GameObject character, int damageRestored)
+        {
+            Vector3 spawnPosition = Camera.main.WorldToScreenPoint(character.transform.position);
+
+            TMP_Text tmpText = Instantiate(healthTextPrefab, spawnPosition, Quaternion.identity, gameCanvas.transform).
+                GetComponent<TMP_Text>();
+
+            tmpText.text = damageRestored.ToString();
+        }
+
     }
 
 }

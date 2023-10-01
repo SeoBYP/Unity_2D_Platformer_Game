@@ -9,7 +9,10 @@ namespace Lesson_12
     public class Damageable : MonoBehaviour
     {
         public UnityEvent<int, Vector2> damageableHit;
-
+        //Lesson 15
+        public UnityEvent damageableDeath;
+        //Lesson 18
+        public UnityEvent<int, int> healthChanged;
         public bool LockVelocity
         {
             get { return animator.GetBool(AnimationStrings.LockVelocity); }
@@ -36,6 +39,9 @@ namespace Lesson_12
             set
             {
                 _health = value;
+                //Lesson 18
+                healthChanged.Invoke(_health, MaxHealth);
+
                 if (_health <= 0)
                 {
                     IsAlive = false;

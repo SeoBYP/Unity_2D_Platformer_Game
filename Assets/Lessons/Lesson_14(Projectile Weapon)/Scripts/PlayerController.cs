@@ -184,7 +184,7 @@ namespace Lesson_14
         public void OnAttack(InputAction.CallbackContext context)
         {
             //TODO Check if alice as well
-            if (context.started && touchingDirections.IsGrounded)
+            if (context.started)
             {
                 animator.SetTrigger(AnimationStrings.Attack);
             }

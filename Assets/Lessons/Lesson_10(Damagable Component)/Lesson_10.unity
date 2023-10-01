@@ -582,7 +582,7 @@ Camera:
   far clip plane: 5000
   field of view: 70
   orthographic: 0
-  orthographic size: 10
+  orthographic size: 0.9
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -31365,7 +31365,7 @@ Animator:
   m_GameObject: {fileID: 1637211966}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 743ed73135c183144841f9d638cbf4f6, type: 2}
+  m_Controller: {fileID: 9100000, guid: eb479dfe493db6d4ca99db1c0bab2f67, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -31785,6 +31785,14 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 88621a26-5ba3-4a2f-a147-a1b462fe1733
     m_ActionName: Player/Jump[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 246a11e1-a63f-4a33-a367-1b190e1a27b5
+    m_ActionName: Player/RangedAttack[/Mouse/rightButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: c0fa4a2c-c172-4312-839f-069f2ffc2c54
+    m_ActionName: UI/Escape[/Keyboard/escape]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -31835,7 +31843,7 @@ Animator:
   m_GameObject: {fileID: 8017013993556373141}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3347bae64c24f9145881998fabb52d79, type: 2}
+  m_Controller: {fileID: 9100000, guid: f75d3a802e7e7ff43a48c20b79c3e0bc, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
