@@ -38019,8 +38019,8 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8158867551399680024}
-        m_TargetAssemblyTypeName: Lesson_14.PlayerController, Assembly-CSharp
+      - m_Target: {fileID: 8158867551399680026}
+        m_TargetAssemblyTypeName: Lesson_19.PlayerController, Assembly-CSharp
         m_MethodName: OnMove
         m_Mode: 0
         m_Arguments:
@@ -38039,8 +38039,8 @@ MonoBehaviour:
     m_ActionName: Player/Look[/Mouse/delta]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8158867551399680024}
-        m_TargetAssemblyTypeName: Lesson_14.PlayerController, Assembly-CSharp
+      - m_Target: {fileID: 8158867551399680026}
+        m_TargetAssemblyTypeName: Lesson_19.PlayerController, Assembly-CSharp
         m_MethodName: OnAttack
         m_Mode: 0
         m_Arguments:
@@ -38095,8 +38095,8 @@ MonoBehaviour:
     m_ActionName: UI/TrackedDeviceOrientation
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8158867551399680024}
-        m_TargetAssemblyTypeName: Lesson_14.PlayerController, Assembly-CSharp
+      - m_Target: {fileID: 8158867551399680026}
+        m_TargetAssemblyTypeName: Lesson_19.PlayerController, Assembly-CSharp
         m_MethodName: OnRun
         m_Mode: 0
         m_Arguments:
@@ -38111,8 +38111,8 @@ MonoBehaviour:
     m_ActionName: Player/Run[/Keyboard/leftShift]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8158867551399680024}
-        m_TargetAssemblyTypeName: Lesson_14.PlayerController, Assembly-CSharp
+      - m_Target: {fileID: 8158867551399680026}
+        m_TargetAssemblyTypeName: Lesson_19.PlayerController, Assembly-CSharp
         m_MethodName: OnJump
         m_Mode: 0
         m_Arguments:
@@ -38127,8 +38127,8 @@ MonoBehaviour:
     m_ActionName: Player/Jump[/Keyboard/space]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8158867551399680024}
-        m_TargetAssemblyTypeName: Lesson_14.PlayerController, Assembly-CSharp
+      - m_Target: {fileID: 8158867551399680026}
+        m_TargetAssemblyTypeName: Lesson_19.PlayerController, Assembly-CSharp
         m_MethodName: OnRangedAttack
         m_Mode: 0
         m_Arguments:
@@ -38695,7 +38695,7 @@ Animator:
   m_GameObject: {fileID: 8017013993556373141}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3347bae64c24f9145881998fabb52d79, type: 2}
+  m_Controller: {fileID: 9100000, guid: 9557b6de1065c654cbedf7a3e172157a, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -38900,7 +38900,7 @@ GameObject:
   - component: {fileID: 4412235725337674750}
   - component: {fileID: 4131557606491865796}
   - component: {fileID: 6314525993167014796}
-  - component: {fileID: 8158867551399680024}
+  - component: {fileID: 8158867551399680026}
   - component: {fileID: 8158867551399680018}
   - component: {fileID: 8158867551399680023}
   - component: {fileID: 8158867551399680025}
@@ -38982,8 +38982,8 @@ MonoBehaviour:
   damageableHit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8158867551399680024}
-        m_TargetAssemblyTypeName: Lesson_14.PlayerController, Assembly-CSharp
+      - m_Target: {fileID: 8158867551399680026}
+        m_TargetAssemblyTypeName: Lesson_19.PlayerController, Assembly-CSharp
         m_MethodName: OnHit
         m_Mode: 0
         m_Arguments:
@@ -39005,26 +39005,6 @@ MonoBehaviour:
   _isAlive: 1
   isInvincible: 0
   invincibilityTime: 0.5
---- !u!114 &8158867551399680024
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8017013993556373141}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9962004684c13b4fb90d12b0659db38, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  walkSpeed: 5
-  runSpeed: 8
-  airWalkSpeed: 3
-  airRunSpeed: 5
-  jumpImpulse: 10
-  _isMoving: 0
-  _isRunning: 0
-  _isFacingRight: 1
 --- !u!114 &8158867551399680025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39039,6 +39019,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 5554392671609091637, guid: df514ac63c2b6e547b7b6191fc359599, type: 3}
   launchPoint: {fileID: 1050091233}
+--- !u!114 &8158867551399680026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8017013993556373141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06c613fdfdac17b4196d817070e1e316, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walkSpeed: 5
+  runSpeed: 8
+  airWalkSpeed: 3
+  airRunSpeed: 5
+  jumpImpulse: 10
+  walljump_Y_Impulse: 10
+  walljump_X_Impulse: 5
+  maxJumpCount: 2
+  _isMoving: 0
+  _isRunning: 0
+  _isFacingRight: 1
 --- !u!82 &8300471700111080132
 AudioSource:
   m_ObjectHideFlags: 0

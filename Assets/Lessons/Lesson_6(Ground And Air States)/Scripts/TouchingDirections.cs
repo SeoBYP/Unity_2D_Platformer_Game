@@ -50,7 +50,6 @@ namespace Lesson_6
         CapsuleCollider2D touchingCol;
         Animator animator;
 
-
         RaycastHit2D[] goundHits = new RaycastHit2D[5];
         RaycastHit2D[] wallHits = new RaycastHit2D[5];
         RaycastHit2D[] ceilingHits = new RaycastHit2D[5];

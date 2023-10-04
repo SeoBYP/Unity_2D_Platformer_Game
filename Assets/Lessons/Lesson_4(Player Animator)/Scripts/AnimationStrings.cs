@@ -26,6 +26,9 @@ namespace Lesson_4
         public static string LockVelocity => "LockVelocity";
         public static string RangedAttack => "RangedAttack";
 
+        public static string IsWallJump => "IsWallJump";
+
+
     }
 
 }
