@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
-
+using UnityEngine.SceneManagement;
 namespace Lesson_16
 {
     public class UIManager : MonoBehaviour
@@ -59,11 +59,11 @@ namespace Lesson_16
                 #endif
 
                 #if (UNITY_EDITOR)
-                    UnityEditor.EditorApplication.isPlaying = false;
+                UnityEditor.EditorApplication.isPlaying = false;
                 #elif (UNITY_STANDALONE)
-                    Application.Quit();
+                Application.Quit();
                 #elif (UNITY_WEBGL)
-                    SenceManager.LoadScene("QuitScene");
+                SceneManager.LoadScene("QuitScene");
                 #endif
             }
         }
