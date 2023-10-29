@@ -137,12 +137,21 @@ namespace Lesson_19
             get { return animator.GetBool(AnimationStrings.IsAlive); }
         }
 
+        private Keyboard kb;
+        private Mouse mouse;
+
         Rigidbody2D rb;
         Animator animator;
         TouchingDirections touchingDirections;
         Damageable damageable;
 
         int currentJumpCount = 0;
+
+        private void InitSetting()
+        {
+            kb = Keyboard.current;
+            mouse = Mouse.current;
+        }
 
         private void Awake()
         {
@@ -154,7 +163,8 @@ namespace Lesson_19
 
         private void FixedUpdate()
         {
-
+            if(kb == null || mouse == null)
+                InitSetting();
             if (!damageable.LockVelocity && !IsWallJump)
             {
                 Move();
