@@ -8,8 +8,10 @@ namespace Lesson_4
     {
         public static string AttackCoolDown => "AttackCoolDown";
 
+        //Lesson_6
         public static string IsGrounded => "isGrounded";
 
+        //Lesson_4
         public static string IsMoving => "isMoving";
         public static string IsRunning => "isRunning";
         public static string yVelocity=> "yVelocity";

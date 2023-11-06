@@ -11,4 +11,5 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Lessons/QuitScene.unity
     guid: 940e6fe4faf725c4d9615c3b1539c1e5
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.input.settings: {fileID: 11400000, guid: 3087d0cc7e9e68046bf1cabcc969eaf1, type: 2}
